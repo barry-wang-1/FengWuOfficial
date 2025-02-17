@@ -121,7 +121,7 @@ const drivers = ref([
 ])
 
 // B站视频aid，需要替换成实际的视频aid
-const bilibiliAid = ref('170001')
+const bilibiliAid = ref('1355043180')
 </script>
 
 <style scoped>
@@ -146,24 +146,30 @@ const bilibiliAid = ref('170001')
   text-align: center;
   margin-bottom: 30px;
 }
-
-.culture-image {
-  width: 100%;
-  height: 300px;
-}
-
-.vehicle-info, .driver-info {
-  padding: 15px;
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-.drivers .el-card {
-  margin-bottom: 20px;
 }
 
 .bilibili-video {
   width: 800px;
   height: 600px;
   max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.culture-image {
+  width: 100%;
+  height: 300px;
+}
+.vehicle-info, .driver-info {
+  padding: 15px;
+  text-align: center;
+}
+.drivers .el-card {
+  margin-bottom: 20px;
 }
 </style>
