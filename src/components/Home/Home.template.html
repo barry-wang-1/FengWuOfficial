@@ -1,7 +1,7 @@
 <div class="home" id="home">
   <!-- 轮播图部分 -->
   <div class="banner-carousel">
-    <el-carousel height="500px">
+    <el-carousel height="600px">
       <el-carousel-item v-for="(banner, index) in banners" :key="index">
         <div class="banner-item" :style="{ backgroundImage: `url(${banner.image})` }">
           <div class="banner-content">
@@ -14,73 +14,79 @@
   </div>
 
   <!-- 企业文化部分 -->
-  <div class="section culture" id="culture">
-    <h2>企业文化</h2>
-    <el-row :gutter="20">
-      <el-col :span="12">
-        <div class="culture-content">
-          <h3>企业愿景</h3>
-          <p>成为中国最值得信赖的物流运输服务商</p>
-          <h3>企业使命</h3>
-          <p>为客户提供安全、高效、可靠的物流运输解决方案</p>
-          <h3>核心价值观</h3>
-          <p>诚信、专业、创新、共赢</p>
-        </div>
-      </el-col>
-      <el-col :span="12">
-        <el-image
-          src="/images/logo.jpg"
-          fit="cover"
-          class="culture-image"
-        />
-      </el-col>
-    </el-row>
+  <div class="section" id="culture">
+    <div class="content-container">
+      <h2>企业文化</h2>
+      <p class="section-description">专注于提供高效可靠的物流运输服务，打造值得信赖的物流品牌</p>
+      <el-row :gutter="20">
+        <el-col :span="12">
+          <div class="culture-content">
+            <h3>企业愿景</h3>
+            <p>成为中国最值得信赖的物流运输服务商</p>
+            <h3>企业使命</h3>
+            <p>为客户提供安全、高效、可靠的物流运输解决方案</p>
+            <h3>核心价值观</h3>
+            <p>诚信、专业、创新、共赢</p>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <el-image
+            src="/images/logo.jpg"
+            fit="cover"
+            class="culture-image"
+          />
+        </el-col>
+      </el-row>
+    </div>
   </div>
-
   <!-- 车型展示部分 -->
-  <div class="section vehicles" id="vehicles">
-    <h2>车型展示</h2>
-    <el-carousel :interval="4000" type="card" height="400px">
-      <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
-        <el-card>
-          <el-image :src="vehicle.image" fit="cover" />
-          <div class="vehicle-info">
-            <h3>{{ vehicle.name }}</h3>
-            <p>{{ vehicle.description }}</p>
-          </div>
-        </el-card>
-      </el-carousel-item>
-    </el-carousel>
+  <div class="section dark-bg" id="vehicles">
+    <div class="content-container">
+      <h2>车型展示</h2>
+      <el-carousel :interval="4000" type="card" height="400px">
+        <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
+          <el-card>
+            <el-image :src="vehicle.image" fit="cover" />
+            <div class="vehicle-info">
+              <h3>{{ vehicle.name }}</h3>
+              <p>{{ vehicle.description }}</p>
+            </div>
+          </el-card>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
   </div>
-
   <!-- 司机团队部分 -->
-  <div class="section drivers" id="drivers">
-    <h2>专业司机团队</h2>
-    <el-row :gutter="20">
-      <el-col :span="8" v-for="(driver, index) in drivers" :key="index">
-        <el-card>
-          <el-image :src="driver.image" fit="cover" />
-          <div class="driver-info">
-            <h3>{{ driver.name }}</h3>
-            <p>{{ driver.experience }}</p>
-            <p>{{ driver.description }}</p>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
+  <div class="section" id="drivers">
+    <div class="content-container">
+      <h2>专业司机团队</h2>
+      <el-row :gutter="20">
+        <el-col :span="8" v-for="(driver, index) in drivers" :key="index">
+          <el-card>
+            <el-image :src="driver.image" fit="cover" />
+            <div class="driver-info">
+              <h3>{{ driver.name }}</h3>
+              <p>{{ driver.experience }}</p>
+              <p>{{ driver.description }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
+    </div>
   </div>
-
   <!-- 企业视频展示 -->
-  <div class="section video" id="video">
-    <h2>企业视频</h2>
-    <iframe
-      :src="`//player.bilibili.com/player.html?aid=${bilibiliAid}&page=1`"
-      scrolling="no"
-      border="0"
-      frameborder="no"
-      framespacing="0"
-      allowfullscreen="true"
-      class="bilibili-video"
-    ></iframe>
+  <div class="section blue-bg" id="video">
+    <div class="content-container">
+      <h2>企业视频</h2>
+      <iframe
+        :src="`//player.bilibili.com/player.html?aid=${bilibiliAid}&page=1`"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+        class="bilibili-video"
+      ></iframe>
+    </div>
   </div>
 </div>

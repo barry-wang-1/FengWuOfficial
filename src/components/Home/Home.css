@@ -4,153 +4,62 @@
   --light-color: #FFFFFF;      /* 白色 */
   --bg-gray: #f5f5f5;         /* 浅灰色背景 */
 }
-
 .home {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   color: var(--secondary-color);
 }
-
 .banner-carousel {
   margin-top: 70px;
-  margin-bottom: 100px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: none;
+  border-radius: 0;
+  width: 100%;
 }
 
-.banner-item {
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 0 100px;
-  position: relative;
+/* 内容区域容器 */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.banner-item::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.2), transparent);  /* 降低黑色透明度 */
+/* 全宽度背景区块 */
+.section {
+  margin-bottom: 0;
+  padding: 80px 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.banner-content {
-  max-width: 600px;
-  position: relative;
-  z-index: 1;
+/* 深色背景区块 */
+.section.dark-bg {
+  background: var(--bg-gray);
+}
+
+/* 蓝色背景区块（类似示例图） */
+.section.blue-bg {
+  background: #005587;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);  /* 增强文字阴影 */
 }
-
-.banner-content h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);  /* 为标题添加更强的阴影 */
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
-
-.banner-content p {
+.section p.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
   font-size: 1.2rem;
   line-height: 1.6;
-}
-
-.section {
-  margin-bottom: 100px;
-  padding: 40px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  letter-spacing: -0.5px;
-}
-
-.section h2::after {
-  height: 2px;
-  width: 40px;
-}
-
-.culture-content {
-  padding: 20px;
-}
-
-.culture-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.culture-content p {
-  line-height: 1.8;
   color: #666;
 }
 
-.culture-image {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.vehicles .el-carousel {
-  margin: 0 -20px;
-}
-
-.vehicles .el-image {
-  height: 300px;  /* 限制图片高度 */
-  width: 100%;
-  object-fit: cover;
-}
-
-.vehicle-info {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.95);  /* 半透明白色背景 */
-  position: absolute;  /* 绝对定位 */
-  bottom: 0;          /* 固定在底部 */
-  left: 0;
-  right: 0;
-  backdrop-filter: blur(5px);  /* 背景模糊效果 */
-}
-
-.vehicle-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-  color: var(--secondary-color);
-}
-
-.vehicle-info p {
-  color: #666;
-  line-height: 1.4;
-}
-
-.driver-info {
-  padding: 20px;
-}
-
-.drivers .el-card {
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.drivers .el-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.video {
-  background: linear-gradient(145deg, #fff, var(--bg-gray));
-}
-
-.bilibili-video {
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+/* 蓝色背景区块的文字颜色 */
+.section.blue-bg h2,
+.section.blue-bg p {
+  color: #fff;
 }
