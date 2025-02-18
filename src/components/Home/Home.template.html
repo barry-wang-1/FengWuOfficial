@@ -1,13 +1,20 @@
-<div class="home">
-  <!-- 头部横幅 -->
-  <div class="banner">
-    <img src="/images/logo.jpg" alt="公司logo" class="company-logo"/>
-    <h1>锋吾物流运输有限公司</h1>
-    <p>专业可靠的物流运输服务商</p>
+<div class="home" id="home">
+  <!-- 轮播图部分 -->
+  <div class="banner-carousel">
+    <el-carousel height="500px">
+      <el-carousel-item v-for="(banner, index) in banners" :key="index">
+        <div class="banner-item" :style="{ backgroundImage: `url(${banner.image})` }">
+          <div class="banner-content">
+            <h2>{{ banner.title }}</h2>
+            <p>{{ banner.description }}</p>
+          </div>
+        </div>
+      </el-carousel-item>
+    </el-carousel>
   </div>
 
   <!-- 企业文化部分 -->
-  <div class="section culture">
+  <div class="section culture" id="culture">
     <h2>企业文化</h2>
     <el-row :gutter="20">
       <el-col :span="12">
@@ -31,7 +38,7 @@
   </div>
 
   <!-- 车型展示部分 -->
-  <div class="section vehicles">
+  <div class="section vehicles" id="vehicles">
     <h2>车型展示</h2>
     <el-carousel :interval="4000" type="card" height="400px">
       <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
@@ -47,7 +54,7 @@
   </div>
 
   <!-- 司机团队部分 -->
-  <div class="section drivers">
+  <div class="section drivers" id="drivers">
     <h2>专业司机团队</h2>
     <el-row :gutter="20">
       <el-col :span="8" v-for="(driver, index) in drivers" :key="index">
@@ -64,7 +71,7 @@
   </div>
 
   <!-- 企业视频展示 -->
-  <div class="section video">
+  <div class="section video" id="video">
     <h2>企业视频</h2>
     <iframe
       :src="`//player.bilibili.com/player.html?aid=${bilibiliAid}&page=1`"

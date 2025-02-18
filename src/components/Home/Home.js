@@ -42,10 +42,29 @@ export default {
     // B站视频aid
     const bilibiliAid = ref('1355043180')
 
+    const banners = ref([
+      {
+        title: '全国物流配送',
+        description: '安全、快捷、专业的物流服务',
+        image: '/images/banner1.jpg'
+      },
+      {
+        title: '专业车队',
+        description: '多种车型满足各类运输需求',
+        image: '/images/banner2.jpg'
+      },
+      {
+        title: '智能物流',
+        description: '先进的物流管理系统',
+        image: '/images/banner3.jpg'
+      }
+    ])
+    // 在 return 中添加
     return {
       vehicles,
       drivers,
-      bilibiliAid
+      bilibiliAid,
+      banners
     }
   }
 }

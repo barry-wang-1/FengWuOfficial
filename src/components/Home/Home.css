@@ -11,7 +11,33 @@
   padding: 20px;
   color: var(--secondary-color);
 }
+.banner-carousel {
+  margin-top: 70px;
+}
 
+.banner-item {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.banner-content {
+  max-width: 600px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.banner-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 20px;
+}
 .banner {
   text-align: center;
   padding: 60px 0;
@@ -29,6 +55,10 @@
   margin-bottom: 60px;
 }
 
+/* 如果需要，也可以单独调整每个部分 */
+#culture, #vehicles, #drivers, #video {
+  scroll-margin-top: 90px;
+}
 .section h2 {
   text-align: center;
   margin-bottom: 30px;
