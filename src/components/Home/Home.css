@@ -13,6 +13,7 @@
 }
 .banner-carousel {
   margin-top: 70px;
+  margin-bottom: 120px;
 }
 
 .banner-item {
@@ -62,7 +63,7 @@
 .section h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: var(--primary-color);
+  color: #333333;  /* 改为深灰色 */
   position: relative;
   padding-bottom: 15px;
 }
@@ -75,7 +76,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color);  /* 保持下划线为红色 */
 }
 
 .culture-content h3 {
