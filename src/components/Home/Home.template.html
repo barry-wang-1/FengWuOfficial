@@ -1,12 +1,16 @@
 <div class="home" id="home">
   <!-- 轮播图部分 -->
   <div class="banner-carousel">
-    <el-carousel height="600px">
+    <el-carousel height="600px" :autoplay="true">
       <el-carousel-item v-for="(banner, index) in banners" :key="index">
-        <div class="banner-item" :style="{ backgroundImage: `url(${banner.image})` }">
-          <div class="banner-content">
-            <h2>{{ banner.title }}</h2>
-            <p>{{ banner.description }}</p>
+        <div class="banner-wrapper">
+          <div class="banner-image-container">
+            <el-image :src="banner.image" fit="cover" class="banner-image" />
+            <div class="banner-overlay"></div>
+            <div class="banner-content">
+              <h2>{{ banner.title }}</h2>
+              <p>{{ banner.description }}</p>
+            </div>
           </div>
         </div>
       </el-carousel-item>
