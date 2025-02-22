@@ -153,9 +153,65 @@
 .section.dark-bg {
   background: var(--bg-gray);
 }
+/* 视频展示样式 */
+.video-container {
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  height: auto;
+}
 
+.video-container h3 {
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.bilibili-video {
+  width: 100%;
+  height: 350px;
+  border-radius: 4px;
+}
+
+#video .el-row {
+  row-gap: 30px;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+  .bilibili-video {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bilibili-video {
+    height: 250px;
+  }
+  .video-container {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .bilibili-video {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .video-container {
+    margin-bottom: 30px;
+  }
+  
+  #video .el-col {
+    width: 100%;
+  }
+}
 /* 蓝色背景区块（类似示例图） */
 .section.blue-bg {
-  background: #005587;
+  background: #8B0000;
   color: #fff;
 }

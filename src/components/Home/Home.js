@@ -8,12 +8,12 @@ export default {
       {
         name: '重型货车',
         description: '载重量：40吨，适合长途运输',
-        image: '/images/logo.jpg'
+        image: '/images/banner1.jpg'
       },
       {
         name: '厢式货车',
         description: '载重量：15吨，适合城市配送',
-        image: '/images/logo.jpg'
+        image: '/images/banner2.jpg'
       }
     ])
 
@@ -39,8 +39,29 @@ export default {
       }
     ])
 
-    // B站视频aid
-    const bilibiliAid = ref('1355043180')
+    // 视频数据
+    const videos = ref([
+      {
+        aid: '326579797',
+        title: '企业宣传片',
+        params: 'autoplay=0'
+      },
+      {
+        aid: '1351857705',
+        title: '服务介绍',
+        params: 'autoplay=0'
+      },
+      {
+        aid: '1701881255',
+        title: '车队展示',
+        params: 'autoplay=0'
+      },
+      {
+        aid: '1051551147',
+        title: '车队展示',
+        params: 'autoplay=0'
+      }
+    ])
 
     const banners = ref([
       {
@@ -63,7 +84,7 @@ export default {
     return {
       vehicles,
       drivers,
-      bilibiliAid,
+      videos,  // 添加 videos 到返回值
       banners
     }
   }

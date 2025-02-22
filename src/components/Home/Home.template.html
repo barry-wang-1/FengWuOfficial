@@ -33,7 +33,7 @@
         </el-col>
         <el-col :span="12">
           <el-image
-            src="/images/logo.jpg"
+            src="/images/banner3.jpg"
             fit="cover"
             class="culture-image"
           />
@@ -80,15 +80,22 @@
   <div class="section blue-bg" id="video">
     <div class="content-container">
       <h2>企业视频</h2>
-      <iframe
-        :src="`//player.bilibili.com/player.html?aid=${bilibiliAid}&page=1`"
-        scrolling="no"
-        border="0"
-        frameborder="no"
-        framespacing="0"
-        allowfullscreen="true"
-        class="bilibili-video"
-      ></iframe>
+      <el-row :gutter="30">
+        <el-col :xs="24" :sm="24" :md="12" :lg="12" v-for="(video, index) in videos" :key="index">
+          <div class="video-container">
+            <iframe
+              :src="`//player.bilibili.com/player.html?aid=${video.aid}&${video.params}`"
+              scrolling="no"
+              border="0"
+              frameborder="no"
+              framespacing="0"
+              allowfullscreen="true"
+              class="bilibili-video"
+            ></iframe>
+            <h3>{{ video.title }}</h3>
+          </div>
+        </el-col>
+      </el-row>
     </div>
   </div>
 </div>
