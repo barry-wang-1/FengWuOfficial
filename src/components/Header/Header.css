@@ -55,7 +55,6 @@
 .nav-menu a:hover {
   color: var(--primary-color);
 }
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
