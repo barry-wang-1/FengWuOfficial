@@ -179,7 +179,6 @@
 #video .el-row {
   row-gap: 30px;
 }
-
 /* 响应式调整 */
 @media (max-width: 1200px) {
   .bilibili-video {
@@ -214,4 +213,47 @@
 .section.blue-bg {
   background: #8B0000;
   color: #fff;
+}
+/* 司机团队样式 */
+#drivers .el-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#drivers .el-image {
+  width: 100%;
+  height: 300px;  /* 统一图片高度 */
+}
+
+#drivers :deep(.el-image__inner) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* 保持图片比例并填充容器 */
+}
+
+#drivers .driver-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#drivers .driver-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color);
+}
+
+#drivers .driver-info p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  #drivers .el-image {
+    height: 250px;
+  }
 }

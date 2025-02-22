@@ -23,19 +23,19 @@ export default {
         name: '张师傅',
         experience: '从业15年',
         description: '安全驾驶里程超过100万公里',
-        image: '/images/logo.jpg'
+        image: '/images/driver1.png'
       },
       {
         name: '李师傅',
         experience: '从业10年',
         description: '优秀驾驶员，多次获得表彰',
-        image: '/images/logo.jpg'
+        image: '/images/driver2.png'
       },
       {
         name: '王师傅',
         experience: '从业12年',
         description: '专注长途运输，经验丰富',
-        image: '/images/logo.jpg'
+        image: '/images/driver3.png'
       }
     ])
 
