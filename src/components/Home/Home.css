@@ -79,6 +79,71 @@
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
+  aspect-ratio: 16/9;
+}
+
+#vehicles .vehicle-image {
+  width: 100%;
+  height: 70%;
+}
+
+#vehicles :deep(.el-image__inner) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 司机团队样式 */
+#drivers .driver-card {
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2/3;  /* 1:1.5的比例 */
+}
+
+#drivers .driver-image {
+  width: 100%;
+  height: 70%;
+}
+
+#drivers :deep(.el-image__inner) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+  #vehicles .vehicle-card,
+  #drivers .driver-card {
+    width: 100%;
+  }
+
+  #vehicles .el-carousel,
+  #drivers .el-carousel {
+    height: auto !important;
+  }
+}
+.banner-carousel .banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-carousel .banner-content p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* 车型展示样式 */
+#vehicles .vehicle-card {
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
 }
 
 #vehicles .vehicle-image {
