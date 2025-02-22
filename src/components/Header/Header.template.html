@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo">
+      <img src="/images/logo.jpg" alt="锋吴快运" />
+      <span>锋吾快运</span>
+    </div>
+    
+    <!-- 移动端菜单按钮 -->
+    <div class="menu-toggle" @click="toggleMenu">
+      <el-icon :size="24"><Menu /></el-icon>
+    </div>
+
+    <!-- 导航菜单 -->
+    <nav :class="['nav-menu', { 'active': isMenuOpen }]">
+      <a href="#home" @click="closeMenu">首页</a>
+      <a href="#culture" @click="closeMenu">企业文化</a>
+      <a href="#vehicles" @click="closeMenu">车型展示</a>
+      <a href="#drivers" @click="closeMenu">司机团队</a>
+      <a href="#video" @click="closeMenu">企业视频</a>
+    </nav>
+  </div>
+</header>
