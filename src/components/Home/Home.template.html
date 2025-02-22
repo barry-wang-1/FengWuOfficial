@@ -3,14 +3,12 @@
   <div class="banner-carousel">
     <el-carousel height="600px" :autoplay="true">
       <el-carousel-item v-for="(banner, index) in banners" :key="index">
-        <div class="banner-wrapper">
-          <div class="banner-image-container">
-            <el-image :src="banner.image" fit="cover" class="banner-image" />
-            <div class="banner-overlay"></div>
-            <div class="banner-content">
-              <h2>{{ banner.title }}</h2>
-              <p>{{ banner.description }}</p>
-            </div>
+        <div class="banner-item">
+          <el-image :src="banner.image" fit="cover" class="banner-background" />
+          <div class="banner-overlay"></div>
+          <div class="banner-content">
+            <h2>{{ banner.title }}</h2>
+            <p>{{ banner.description }}</p>
           </div>
         </div>
       </el-carousel-item>
@@ -47,15 +45,15 @@
   <div class="section dark-bg" id="vehicles">
     <div class="content-container">
       <h2>车型展示</h2>
-      <el-carousel :interval="4000" type="card" height="400px">
+      <el-carousel :interval="4000" type="card" height="500px">
         <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
-          <el-card>
-            <el-image :src="vehicle.image" fit="cover" />
+          <div class="vehicle-card">
+            <el-image :src="vehicle.image" fit="cover" class="vehicle-image" />
             <div class="vehicle-info">
               <h3>{{ vehicle.name }}</h3>
               <p>{{ vehicle.description }}</p>
             </div>
-          </el-card>
+          </div>
         </el-carousel-item>
       </el-carousel>
     </div>

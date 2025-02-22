@@ -10,12 +10,127 @@
   margin: 0;
   color: var(--secondary-color);
 }
+
+/* 轮播图样式 */
 .banner-carousel {
-  margin-top: 70px;
-  margin-bottom: 0;
-  box-shadow: none;
-  border-radius: 0;
   width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.banner-carousel .el-carousel,
+.banner-carousel .el-carousel__container,
+.banner-carousel .el-carousel__item {
+  height: 100% !important;
+}
+
+.banner-carousel .banner-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-carousel .banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.banner-carousel .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.banner-carousel .banner-content {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  color: #fff;
+  z-index: 999 !important;
+  padding: 20px;
+}
+
+.banner-carousel .banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-carousel .banner-content p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* 车型展示样式 */
+#vehicles .vehicle-card {
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+#vehicles .vehicle-image {
+  width: 100%;
+  height: 70%;
+  display: block;
+}
+
+#vehicles .vehicle-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  min-height: 30%;
+}
+
+#vehicles .vehicle-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+#vehicles .vehicle-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+#vehicles .el-carousel__item {
+  padding: 10px;
+}
+/* 其他部分样式保持不变 */
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.section p.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 蓝色背景区块的文字颜色 */
+.section.blue-bg h2,
+.section.blue-bg p {
+  color: #fff;
 }
 
 /* 内容区域容器 */
@@ -42,24 +157,5 @@
 /* 蓝色背景区块（类似示例图） */
 .section.blue-bg {
   background: #005587;
-  color: #fff;
-}
-.section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.section p.section-description {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #666;
-}
-
-/* 蓝色背景区块的文字颜色 */
-.section.blue-bg h2,
-.section.blue-bg p {
   color: #fff;
 }
