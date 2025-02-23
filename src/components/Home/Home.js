@@ -8,7 +8,7 @@ export default {
       {
         name: '重型货车',
         description: '载重量：40吨，适合长途运输',
-        image: '/images/banner1.jpg'
+        image: '/images/banner3.jpg'
       },
       {
         name: '厢式货车',
