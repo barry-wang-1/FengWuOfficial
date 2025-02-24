@@ -8,12 +8,12 @@ export default {
       {
         name: '重型货车',
         description: '载重量：40吨，适合长途运输',
-        image: '/FengWuOfficial/images/banner3.jpg'
+        image: '/images/banner3.jpg'
       },
       {
         name: '厢式货车',
         description: '载重量：15吨，适合城市配送',
-        image: '/FengWuOfficial/images/banner2.jpg'
+        image: '/images/banner2.jpg'
       }
     ])
 
@@ -23,19 +23,19 @@ export default {
         name: '张师傅',
         experience: '从业15年',
         description: '安全驾驶里程超过100万公里',
-        image: '/FengWuOfficial/images/driver1.png'
+        image: '/images/driver1.png'
       },
       {
         name: '李师傅',
         experience: '从业10年',
         description: '优秀驾驶员，多次获得表彰',
-        image: '/FengWuOfficial/images/driver2.png'
+        image: '/images/driver2.png'
       },
       {
         name: '王师傅',
         experience: '从业12年',
         description: '专注长途运输，经验丰富',
-        image: '/FengWuOfficial/images/driver3.png'
+        image: '/images/driver3.png'
       }
     ])
 
@@ -67,17 +67,17 @@ export default {
       {
         title: '全国物流配送',
         description: '安全、快捷、专业的物流服务',
-        image: '/FengWuOfficial/images/banner1.jpg'  // 修改这里
+        image: '/images/banner1.jpg'  // 修改这里
       },
       {
         title: '专业车队',
         description: '多种车型满足各类运输需求',
-        image: '/FengWuOfficial/images/banner2.jpg'  // 修改这里
+        image: '/images/banner2.jpg'  // 修改这里
       },
       {
         title: '智能物流',
         description: '先进的物流管理系统',
-        image: '/FengWuOfficial/images/banner3.jpg'
+        image: '/images/banner3.jpg'
       }
     ])
     // 在 return 中添加
