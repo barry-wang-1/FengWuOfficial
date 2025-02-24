@@ -3,7 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: process.env.NODE_ENV === 'production'
-  ? '/FengWuOfficial/'
-  : '/'
+  base: './',  // 修改这里，使用相对路径
 })
