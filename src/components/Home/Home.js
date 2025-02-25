@@ -83,7 +83,7 @@ export default {
 
     const culture = ref([
       {
-        image: new URL('/src/assets/images/banner1.jpg', import.meta.url).href,
+        image: new URL('/src/assets/images/banner2.jpg', import.meta.url).href,
       }
     ])
 

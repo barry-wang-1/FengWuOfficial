@@ -20,23 +20,31 @@
     <div class="content-container">
       <h2>企业文化</h2>
       <p class="section-description">专注于提供高效可靠的物流运输服务，打造值得信赖的物流品牌</p>
-      <el-row :gutter="20">
+      <el-row :gutter="40">
         <el-col :span="12">
           <div class="culture-content">
-            <h3>企业愿景</h3>
-            <p>成为中国最值得信赖的物流运输服务商</p>
-            <h3>企业使命</h3>
-            <p>为客户提供安全、高效、可靠的物流运输解决方案</p>
-            <h3>核心价值观</h3>
-            <p>诚信、专业、创新、共赢</p>
+            <div class="culture-item">
+              <h3>企业愿景</h3>
+              <p>成为中国最值得信赖的物流运输服务商</p>
+            </div>
+            <div class="culture-item">
+              <h3>企业使命</h3>
+              <p>为客户提供安全、高效、可靠的物流运输解决方案</p>
+            </div>
+            <div class="culture-item">
+              <h3>核心价值观</h3>
+              <p>诚信、专业、创新、共赢</p>
+            </div>
           </div>
         </el-col>
         <el-col :span="12">
-          <el-image
-            :src="culture[0].image"
-            fit="cover"
-            class="culture-image"
-          />
+          <div class="culture-image-wrapper">
+            <el-image
+              :src="culture[0].image"
+              fit="cover"
+              class="culture-image"
+            />
+          </div>
         </el-col>
       </el-row>
     </div>
