@@ -80,12 +80,20 @@ export default {
         image: new URL('/src/assets/images/banner3.jpg', import.meta.url).href,
       }
     ])
+
+    const culture = ref([
+      {
+        image: new URL('/src/assets/images/banner1.jpg', import.meta.url).href,
+      }
+    ])
+
     // 在 return 中添加
     return {
       vehicles,
       drivers,
-      videos,  // 添加 videos 到返回值
-      banners
+      videos, 
+      banners,
+      culture
     }
   }
 }
