@@ -73,7 +73,7 @@
   <div class="section" id="drivers">
     <div class="content-container">
       <h2>专业司机团队</h2>
-      <el-carousel :interval="4000" type="card" height="450px">
+      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="450px">
         <el-carousel-item v-for="(driver, index) in drivers" :key="index">
           <div class="driver-card">
             <el-image :src="driver.image" fit="cover" class="driver-image" />
