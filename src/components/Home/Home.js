@@ -28,7 +28,7 @@ export default {
       {
         name: '厢式货车',
         description: '载重量：15吨，适合城市配送',
-        image: new URL('/src/assets/images/banner2.jpg', import.meta.url).href,
+        image: new URL('/src/assets/images/banner3.jpg', import.meta.url).href,
       }
     ]);
 

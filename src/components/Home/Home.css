@@ -271,6 +271,25 @@
     font-size: 1rem;
   }
 
+    /* 移动端轮播图样式覆盖 */
+    #vehicles :deep(.el-carousel__item),
+    #drivers :deep(.el-carousel__item) {
+      transform: none !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+    }
+  
+    #vehicles :deep(.el-carousel__item:not(.is-active)),
+    #drivers :deep(.el-carousel__item:not(.is-active)) {
+      display: none !important;
+    }
+  
+    #vehicles .vehicle-card,
+    #drivers .driver-card {
+      width: 100% !important;
+      transform: none !important;
+    }
+
   /* 企业文化响应式 */
   #culture .el-row {
     flex-direction: column-reverse;
@@ -308,15 +327,22 @@
 
   /* 车型展示响应式 */
   #vehicles .el-carousel {
+    width: 100%; /* 确保容器宽度是100% */
     height: auto !important;
+    overflow: hidden;
   }
 
   #vehicles .vehicle-card {
     aspect-ratio: 3/4;
+    width: 100%;
+    overflow: hidden;
   }
 
   #vehicles .vehicle-image {
+    width: 100%;
     height: 60%;
+    object-fit: contain;
+    object-position: center;
   }
 
   /* 司机团队响应式调整 */
