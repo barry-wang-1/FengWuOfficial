@@ -1,14 +1,12 @@
 :root {
-  --primary-color: #8B0000;
-  /* 深红色 */
-  --secondary-color: #333333;
-  /* 深灰近黑色 */
-  --light-color: #FFFFFF;
-  /* 白色 */
-  --bg-gray: #f5f5f5;
-  /* 浅灰色背景 */
+  /* 主色调、辅助色调、背景色 */
+  --primary-color: #8B0000; /* 深红色 */
+  --secondary-color: #333333; /* 深灰近黑色 */
+  --light-color: #FFFFFF; /* 白色 */
+  --bg-gray: #f5f5f5; /* 浅灰色背景 */
 }
 
+/* 全局样式 */
 .home {
   width: 100%;
   padding: 0;
@@ -16,7 +14,9 @@
   color: var(--secondary-color);
 }
 
-/* 轮播图样式 */
+/* =======================================
+   轮播图样式
+======================================= */
 .banner-carousel {
   width: 100%;
   height: 600px;
@@ -77,7 +77,10 @@
   font-size: 1.2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-/* 车型展示样式 */
+
+/* =======================================
+   车型展示样式
+======================================= */
 #vehicles .vehicle-card {
   height: 100%;
   position: relative;
@@ -86,271 +89,10 @@
   background: #fff;
   aspect-ratio: 16/9;
 }
-/* 企业文化样式 */
-.culture-content {
-  padding: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.culture-item {
-  margin-bottom: 30px;
-}
-
-.culture-item h3 {
-  font-size: 1.8rem;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-
-.culture-item p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--secondary-color);
-}
-
-.culture-image-wrapper {
-  height: 100%;
-  min-height: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.culture-image {
-  width: 100%;
-  height: 100%;
-}
-/* 企业文化响应式调整 */
-@media (max-width: 768px) {
-  #culture .el-row {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  #culture .el-col {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .culture-image-wrapper {
-    min-height: 250px;
-    margin-bottom: 30px;
-    width: 100%;  /* 修改这里 */
-    max-width: none;  /* 移除最大宽度限制 */
-  }
-  .culture-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* 添加这行确保图片填充容器 */
-  }
-  .culture-content {
-    padding: 10px 20px;  /* 增加左右内边距 */
-    text-align: center;
-    width: 100%;  /* 修改这里 */
-  }
-  .culture-item {
-    margin: 0 auto 25px;
-    width: 100%;
-    max-width: 500px;  /* 文字内容保持适当宽度 */
-  }
-}
-/* 车型展示响应式调整 */
-@media (max-width: 768px) {
-  #vehicles .el-carousel {
-    height: auto !important;
-  }
-  #vehicles .vehicle-card {
-    width: 100%;
-    height: auto;
-  }
-  #vehicles .vehicle-image {
-    width: 100%;
-    aspect-ratio: 16/9;
-    height: auto;
-  }
-  #vehicles .vehicle-info {
-    position: relative;
-    padding: 20px;
-    background: #fff;
-  }
-  #vehicles :deep(.el-carousel__arrow) {
-    transform: translateY(-50%);
-  }
-}
-/* 司机团队响应式调整 */
-@media (max-width: 768px) {
-  #drivers .el-carousel {
-    height: auto !important;
-  }
-
-  #drivers .driver-card {
-    width: 100%;
-    aspect-ratio: auto;
-    height: auto;
-  }
-
-  #drivers .driver-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    height: auto;
-  }
-
-  #drivers .driver-info {
-    position: relative;
-    background: #fff;
-    padding: 15px;
-  }
-
-  #drivers :deep(.el-carousel__item) {
-    padding: 15px;
-  }
-}
-#vehicles .vehicle-image {
-  width: 100%;
-  height: 70%;
-}
-
-#vehicles :deep(.el-image__inner) {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* 司机团队样式 */
-#drivers .driver-card {
-  height: 100%;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 2/3;
-  /* 1:1.5的比例 */
-}
-
-#drivers .driver-image {
-  width: 100%;
-  height: 70%;
-}
-
-#drivers :deep(.el-image__inner) {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#drivers .el-carousel {
-  width: 100%;
-  height: 500px;
-}
-
-#drivers :deep(.el-carousel__container) {
-  display: flex;
-  justify-content: center;
-}
-
-#drivers :deep(.el-carousel__item) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#drivers .driver-card {
-  width: 90%;
-  max-width: 350px;
-  margin: 0 auto;
-  aspect-ratio: 2/3;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#drivers .driver-image {
-  width: 100%;
-  height: 70%;
-}
-
-#drivers :deep(.el-image__inner) {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#drivers .el-carousel {
-  width: 100%;
-}
-
-#drivers :deep(.el-carousel__container) {
-  display: flex;
-  justify-content: center;
-}
-
-#drivers :deep(.el-carousel__item) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#drivers :deep(.el-carousel__item.is-active) {
-  z-index: 2;
-}
-
-#drivers :deep(.el-carousel__item:not(.is-active)) {
-  opacity: 0.6;
-  transform: scale(0.85);
-}
-
-#drivers .driver-card {
-  width: 90%;
-  max-width: 350px;
-  margin: 0 auto;
-  aspect-ratio: 2/3;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#drivers .driver-image {
-  width: 100%;
-  height: 70%;
-}
-
-#drivers :deep(.el-image__inner) {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.banner-carousel .banner-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.banner-carousel .banner-content p {
-  font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* 车型展示样式 */
-#vehicles .vehicle-card {
-  height: 100%;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-}
 
 #vehicles .vehicle-image {
   width: 100%;
   height: 70%;
-  display: block;
 }
 
 #vehicles .vehicle-info {
@@ -379,50 +121,59 @@
   padding: 10px;
 }
 
-/* 其他部分样式保持不变 */
-.section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
+/* =======================================
+   司机团队样式
+======================================= */
+#drivers .driver-card {
+  height: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 2/3;
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
-.section p.section-description {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+#drivers .driver-image {
+  width: 100%;
+  height: 70%;
+}
+
+#drivers .driver-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  min-height: 30%;
+  transition: all 0.3s ease;
+}
+
+#drivers .driver-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+#drivers .driver-info .experience {
   font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+#drivers .driver-info .description {
+  font-size: 1rem;
   line-height: 1.6;
   color: #666;
 }
 
-/* 蓝色背景区块的文字颜色 */
-.section.blue-bg h2,
-.section.blue-bg p {
-  color: #fff;
-}
-
-/* 内容区域容器 */
-.content-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* 全宽度背景区块 */
-.section {
-  margin-bottom: 0;
-  padding: 80px 0;
-  background: #fff;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* 深色背景区块 */
-.section.dark-bg {
-  background: var(--bg-gray);
-}
-
-/* 视频展示样式 */
+/* =======================================
+   视频展示样式
+======================================= */
 .video-container {
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.1);
@@ -445,11 +196,9 @@
   border-radius: 4px;
 }
 
-#video .el-row {
-  row-gap: 30px;
-}
-
-/* 响应式调整 */
+/* =======================================
+   响应式调整
+======================================= */
 @media (max-width: 1200px) {
   .bilibili-video {
     height: 300px;
@@ -457,7 +206,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* 首页轮播图响应式 */
   .banner-carousel {
     height: auto;
@@ -492,139 +240,9 @@
     height: 60%;
   }
 
-  .banner-carousel .el-carousel,
-  .banner-carousel .el-carousel__container,
-  .banner-carousel .el-carousel__item {
-    height: auto !important;
-    aspect-ratio: 16/9;
-  }
-
-  .banner-carousel .banner-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .banner-carousel .banner-content p {
-    font-size: 1rem;
-  }
-
-  /* 车型展示响应式 */
-  #vehicles .el-carousel {
-    height: auto !important;
-  }
-
-  #vehicles .vehicle-card {
-    aspect-ratio: 3/4;
-  }
-
-  #vehicles .vehicle-image {
-    height: 60%;
-  }
-
-  /* 通用图片样式 */
-  :deep(.el-image__inner) {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  /* 标题响应式 */
-  .section h2 {
-    font-size: 2rem;
-  }
-
-  .section p.section-description {
-    font-size: 1rem;
-  }
-}
-
-.video-container {
-  margin-bottom: 0;
-}
-
-@media (max-width: 480px) {
-  .bilibili-video {
-    height: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .video-container {
-    margin-bottom: 30px;
-  }
-
-  #video .el-col {
-    width: 100%;
-  }
-}
-
-/* 蓝色背景区块（类似示例图） */
-.section.blue-bg {
-  background: #8B0000;
-  color: #fff;
-}
-
-/* 司机团队样式 */
-#drivers .driver-card {
-  height: 100%;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#drivers .driver-image {
-  width: 100%;
-  height: 70%;
-  display: block;
-}
-
-#drivers .driver-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  min-height: 30%;
-  transition: all 0.3s ease;
-}
-
-#drivers .driver-info h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: var(--primary-color);
-}
-
-#drivers .driver-info .experience {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-  margin-bottom: 8px;
-}
-
-#drivers .driver-info .description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-}
-
-#drivers .el-carousel__item {
-  padding: 10px;
-}
-
-/* 移动端响应式调整 */
-@media (max-width: 768px) {
+  /* 司机团队响应式调整 */
   #drivers .el-carousel {
     height: 500px !important;
-  }
-
-  #drivers :deep(.el-carousel__container) {
-    height: 100% !important;
-  }
-
-  #drivers :deep(.el-carousel__item) {
-    height: 100% !important;
-    padding: 10px;
   }
 
   #drivers .driver-card {
@@ -655,4 +273,81 @@
   #drivers .driver-info .description {
     font-size: 0.9rem;
   }
+
+  /* 通用图片样式 */
+  :deep(.el-image__inner) {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* 标题响应式 */
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section p.section-description {
+    font-size: 1rem;
+  }
+
+  /* 视频容器样式响应式 */
+  .video-container {
+    margin-bottom: 30px;
+  }
+
+  #video .el-col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bilibili-video {
+    height: 200px;
+  }
+}
+
+/* =======================================
+   蓝色背景区块样式
+======================================= */
+.section.blue-bg {
+  background: #8B0000;
+  color: #fff;
+}
+
+.section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section p.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 深色背景区块 */
+.section.dark-bg {
+  background: var(--bg-gray);
+}
+
+/* 内容区域容器 */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 全宽度背景区块 */
+.section {
+  margin-bottom: 0;
+  padding: 80px 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
 }
