@@ -271,24 +271,43 @@
     font-size: 1rem;
   }
 
-    /* 移动端轮播图样式覆盖 */
-    #vehicles :deep(.el-carousel__item),
-    #drivers :deep(.el-carousel__item) {
-      transform: none !important;
-      opacity: 1 !important;
-      z-index: 1 !important;
-    }
-  
-    #vehicles :deep(.el-carousel__item:not(.is-active)),
-    #drivers :deep(.el-carousel__item:not(.is-active)) {
-      display: none !important;
-    }
-  
-    #vehicles .vehicle-card,
-    #drivers .driver-card {
-      width: 100% !important;
-      transform: none !important;
-    }
+     /* 移动端轮播图样式覆盖 */
+  #vehicles :deep(.el-carousel__container),
+  #drivers :deep(.el-carousel__container) {
+    overflow: hidden;
+  }
+
+  #vehicles :deep(.el-carousel__item),
+  #drivers :deep(.el-carousel__item) {
+    transform: none !important;
+    opacity: 1 !important;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #vehicles :deep(.el-carousel__item.is-animating),
+  #drivers :deep(.el-carousel__item.is-animating) {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #vehicles :deep(.el-carousel__item:not(.is-active)),
+  #drivers :deep(.el-carousel__item:not(.is-active)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%) !important;
+  }
+
+  #vehicles :deep(.el-carousel__item.is-active),
+  #drivers :deep(.el-carousel__item.is-active) {
+    transform: translateX(0) !important;
+  }
+
+  #vehicles .vehicle-card,
+  #drivers .driver-card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
 
   /* 企业文化响应式 */
   #culture .el-row {
@@ -327,16 +346,16 @@
 
   /* 车型展示响应式 */
   #vehicles .el-carousel {
-    width: 100%; /* 确保容器宽度是100% */
+    width: 100%;
     height: auto !important;
     overflow: hidden;
   }
 
-  #vehicles .vehicle-card {
+  /* #vehicles .vehicle-card {
     aspect-ratio: 3/4;
     width: 100%;
     overflow: hidden;
-  }
+  } */
 
   #vehicles .vehicle-image {
     width: 100%;
@@ -350,12 +369,12 @@
     height: 500px !important;
   }
 
-  #drivers .driver-card {
+  /* #drivers .driver-card {
     width: 85%;
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   #drivers .driver-image {
     height: 65%;

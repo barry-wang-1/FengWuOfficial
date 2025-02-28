@@ -39,11 +39,7 @@
         </el-col>
         <el-col :xs="24" :sm="24" :md="12" :lg="12">
           <div class="culture-image-wrapper">
-            <el-image
-              :src="culture[0].image"
-              fit="cover"
-              class="culture-image"
-            />
+            <el-image :src="culture[0].image" fit="cover" class="culture-image" />
           </div>
         </el-col>
       </el-row>
@@ -53,10 +49,7 @@
   <div class="section dark-bg" id="vehicles">
     <div class="content-container">
       <h2>车型展示</h2>
-      <el-carousel 
-        :interval="4000" 
-        :type="isMobile ? '' : 'card'"
-        height="500px">
+      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="500px">
         <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
           <div class="vehicle-card">
             <el-image :src="vehicle.image" fit="cover" class="vehicle-image" />
@@ -94,15 +87,8 @@
       <el-row :gutter="30">
         <el-col :xs="24" :sm="24" :md="12" :lg="12" v-for="(video, index) in videos" :key="index">
           <div class="video-container">
-            <iframe
-              :src="`//player.bilibili.com/player.html?aid=${video.aid}&${video.params}`"
-              scrolling="no"
-              border="0"
-              frameborder="no"
-              framespacing="0"
-              allowfullscreen="true"
-              class="bilibili-video"
-            ></iframe>
+            <iframe :src="`//player.bilibili.com/player.html?aid=${video.aid}&${video.params}`" scrolling="no"
+              border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="bilibili-video"></iframe>
             <h3>{{ video.title }}</h3>
           </div>
         </el-col>
