@@ -270,6 +270,13 @@
   .banner-carousel .banner-content p {
     font-size: 1rem;
   }
+
+  .banner-carousel :deep(.el-carousel__container) {
+    overflow: hidden;
+    touch-action: pan-y pinch-zoom;  /* 限制只允许垂直滑动和缩放 */
+  }
+
+  
 /* 移动端轮播图样式覆盖 */
   #vehicles :deep(.el-carousel__container),
   #drivers :deep(.el-carousel__container) {
