@@ -1,7 +1,7 @@
 <div class="home" id="home">
   <!-- 轮播图部分 -->
   <div class="banner-carousel">
-    <el-carousel height="600px" :autoplay="true">
+    <el-carousel height="600px" :autoplay="true" ref="bannersCarousel" @touchstart="handleTouchStart('banners')" @touchend="handleTouchEnd('banners')">
       <el-carousel-item v-for="(banner, index) in banners" :key="index">
         <div class="banner-item">
           <el-image :src="banner.image" fit="cover" class="banner-background" />
@@ -49,7 +49,7 @@
   <div class="section dark-bg" id="vehicles">
     <div class="content-container">
       <h2>车型展示</h2>
-      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="500px">
+      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="500px" ref="vehiclesCarousel" @touchstart="handleTouchStart('vehicles')" @touchend="handleTouchEnd('vehicles')">
         <el-carousel-item v-for="(vehicle, index) in vehicles" :key="index">
           <div class="vehicle-card">
             <el-image :src="vehicle.image" fit="cover" class="vehicle-image" />
@@ -66,7 +66,7 @@
   <div class="section" id="drivers">
     <div class="content-container">
       <h2>专业司机团队</h2>
-      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="450px">
+      <el-carousel :interval="4000" :type="isMobile ? '' : 'card'" height="450px" ref="driversCarousel" @touchstart="handleTouchStart('drivers')" @touchend="handleTouchEnd('drivers')">
         <el-carousel-item v-for="(driver, index) in drivers" :key="index">
           <div class="driver-card">
             <el-image :src="driver.image" fit="cover" class="driver-image" />

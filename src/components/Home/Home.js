@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, reactive } from 'vue'
 
 export default {
   name: 'Home',
@@ -18,6 +18,64 @@ export default {
       window.removeEventListener('resize', handleResize)
     })
 
+    // 引用定义
+    const bannersCarousel = ref(null);
+    const driversCarousel = ref(null);
+    const vehiclesCarousel = ref(null);
+
+    const touchStates = reactive({
+      banners: { startX: 0, endX: 0 },
+      drivers: { startX: 0, endX: 0 },
+      vehicles: { startX: 0, endX: 0 }
+    });
+
+    const handleTouchStart = (type) => {
+      touchStates[type].startX = event.touches[0].pageX;
+    };
+
+    // 触摸结束事件处理
+    const handleTouchEnd = (type) => {
+      touchStates[type].endX = event.changedTouches[0].pageX;
+      const diffX = touchStates[type].startX - touchStates[type].endX;
+
+      if (diffX > 50) {
+        if (type === 'banners') {
+          bannersCarousel.value.next();
+        } else if (type === 'drivers') {
+          driversCarousel.value.next();
+        } else if (type === 'vehicles') {
+          vehiclesCarousel.value.next();
+        }
+      } else if (diffX < -50) {
+        if (type === 'banners') {
+          bannersCarousel.value.prev();
+        } else if (type === 'drivers') {
+          driversCarousel.value.prev();
+        } else if (type === 'vehicles') {
+          vehiclesCarousel.value.prev();
+        }
+      }
+    };
+
+    // const startX = ref(0);
+    // const endX = ref(0);
+    // const carousel = ref(null);
+
+    // const handleTouchStart = (event) => {
+    //   startX.value = event.touches[0].pageX;
+    // };
+
+    // const handleTouchEnd = (event) => {
+    //   endX.value = event.changedTouches[0].pageX;
+    //   const diffX = startX.value - endX.value;
+
+    //   if (diffX > 50) {
+    //     carousel.value.next();
+    //   } else if (diffX < -50) {
+    //     carousel.value.prev();
+    //   }
+    // };
+
     // 车型数据
     const vehicles = ref([
       {
@@ -28,7 +86,7 @@ export default {
       {
         name: '厢式货车',
         description: '载重量：15吨，适合城市配送',
-        image: new URL('/src/assets/images/banner3.jpg', import.meta.url).href,
+        image: new URL('/src/assets/images/banner2.jpg', import.meta.url).href,
       }
     ]);
 
@@ -107,9 +165,33 @@ export default {
       isMobile,
       vehicles,
       drivers,
-      videos, 
+      videos,
       banners,
-      culture
+      culture,
+      // startX,
+      // endX,
+      // handleTouchStart,
+      // handleTouchEnd,
+      // carousel,
+      handleTouchStart,
+      handleTouchEnd,
+      bannersCarousel,
+      vehiclesCarousel,
+      driversCarousel
     }
-  }
+  },
+
+  // methods: {
+  //   handleTouchStart(event) {
+  //     this.startX = event.touches[0].pageX;
+  //   },
+  //   handleTouchEnd(event) {
+  //     this.endX = event.changedTouches[0].pageX;
+  //     if (this.startX - this.endX > 50) {
+  //       this.$refs.carousel.next(); // 向右滑动，显示下一张
+  //     } else if (this.startX - this.endX < -50) {
+  //       this.$refs.carousel.prev(); // 向左滑动，显示上一张
+  //     }
+  //   }
+  // }
 }

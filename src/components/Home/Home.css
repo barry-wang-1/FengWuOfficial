@@ -270,26 +270,24 @@
   .banner-carousel .banner-content p {
     font-size: 1rem;
   }
-
-     /* 移动端轮播图样式覆盖 */
+/* 移动端轮播图样式覆盖 */
   #vehicles :deep(.el-carousel__container),
   #drivers :deep(.el-carousel__container) {
     overflow: hidden;
+    touch-action: pan-y pinch-zoom;  /* 启用垂直平移和缩放手势 */
   }
-
   #vehicles :deep(.el-carousel__item),
   #drivers :deep(.el-carousel__item) {
     transform: none !important;
     opacity: 1 !important;
     z-index: 1;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);  /* 使用更自然的缓动函数 */
+    will-change: transform;  /* 优化性能 */
   }
-
   #vehicles :deep(.el-carousel__item.is-animating),
   #drivers :deep(.el-carousel__item.is-animating) {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   #vehicles :deep(.el-carousel__item:not(.is-active)),
   #drivers :deep(.el-carousel__item:not(.is-active)) {
     position: absolute;
